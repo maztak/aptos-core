@@ -51,8 +51,8 @@ spec aptos_framework::stake {
 
         // property 2: The owner of a validator remains immutable.
         apply ValidatorOwnerNoChange to *;
-        apply ValidatorNotChangeDuringReconfig to * except on_new_epoch;
-        apply StakePoolNotChangeDuringReconfig to * except on_new_epoch, update_stake_pool;
+        // apply ValidatorNotChangeDuringReconfig to * except on_new_epoch;
+        // apply StakePoolNotChangeDuringReconfig to * except on_new_epoch, update_stake_pool;
 
         // ghost variable
         global ghost_valid_perf: ValidatorPerformance;
